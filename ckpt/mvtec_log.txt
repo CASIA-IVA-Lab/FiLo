@@ -1,0 +1,14 @@
+24-07-25 22:20:52.576 - INFO: groundingdino_config: ./models/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py
+24-07-25 22:20:52.576 - INFO: grounded_checkpoint: /mnt/guzhaopeng/FiLo/ckpt/grounding_train_on_visa.pth
+24-07-25 22:20:52.576 - INFO: clip_model: ViT-L-14-336
+24-07-25 22:20:52.576 - INFO: clip_pretrained: openai
+24-07-25 22:20:52.576 - INFO: image_size: 518
+24-07-25 22:20:52.576 - INFO: features_list: [6, 12, 18, 24]
+24-07-25 22:20:52.576 - INFO: dataset: mvtec
+24-07-25 22:20:52.576 - INFO: data_path: /mnt/guzhaopeng/data/mvtec
+24-07-25 22:20:52.576 - INFO: box_threshold: 0.25
+24-07-25 22:20:52.576 - INFO: text_threshold: 0.25
+24-07-25 22:20:52.577 - INFO: area_threshold: 0.7
+24-07-25 22:20:52.577 - INFO: device: cuda
+24-07-25 22:20:52.577 - INFO: ckpt_path: /mnt/guzhaopeng/FiLo/ckpt/filo_train_on_visa.pth
+24-07-25 22:20:52.577 - INFO: n_ctx: 12
