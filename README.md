@@ -36,8 +36,8 @@ You can download our fine-tuned Grounding DINO model from the table below. We fi
 
 | **Training dataset** |      **Grounding DINO Weights Address**             |
 | :-----------------:  |:-----------------------------------: |
-|  MVTec  | [groundingdino_train_on_mvtec](https://github.com/CASIA-IVA-Lab/FiLo) |
-|  VisA   | [groundingdino_train_on_visa](https://github.com/CASIA-IVA-Lab/FiLo) |
+|  MVTec  | [groundingdino_train_on_mvtec](https://huggingface.co/FantasticGNU/FiLo/blob/main/grounding_train_on_mvtec.pth) |
+|  VisA   | [groundingdino_train_on_visa](https://huggingface.co/FantasticGNU/FiLo/blob/main/grounding_train_on_visa.pth) |
 
 
 
@@ -47,8 +47,51 @@ You can download our pre-trained FiLo checkpoint from the table below.
 
 | **Training dataset** |      **FiLo Weights Address**             |
 | :-----------------:  |:-----------------------------------: |
-|  MVTec  | [filo_train_on_mvtec](https://github.com/CASIA-IVA-Lab/FiLo) |
-|  VisA   | [filo_train_on_visa](https://github.com/CASIA-IVA-Lab/FiLo) |
+|  MVTec  | [filo_train_on_mvtec](https://huggingface.co/FantasticGNU/FiLo/blob/main/filo_train_on_mvtec.pth) |
+|  VisA   | [filo_train_on_visa](https://huggingface.co/FantasticGNU/FiLo/blob/main/filo_train_on_visa.pth) |
+
+
+### Prepare data
+
+#### MVTec AD
+- Download and extract [MVTec AD](https://www.mvtec.com/company/research/datasets/mvtec-ad) into `data/mvtec`
+- run`python data/mvtec.py` to obtain `data/mvtec/meta.json`
+```
+data
+├── mvtec
+    ├── meta.json
+    ├── bottle
+        ├── train
+            ├── good
+                ├── 000.png
+        ├── test
+            ├── good
+                ├── 000.png
+            ├── anomaly1
+                ├── 000.png
+        ├── ground_truth
+            ├── anomaly1
+                ├── 000.png
+```
+
+#### VisA
+- Download and extract [VisA](https://amazon-visual-anomaly.s3.us-west-2.amazonaws.com/VisA_20220922.tar) into `data/visa`
+- run`python data/visa.py` to obtain `data/visa/meta.json`
+```
+data
+├── visa
+    ├── meta.json
+    ├── candle
+        ├── Data
+            ├── Images
+                ├── Anomaly
+                    ├── 000.JPG
+                ├── Normal
+                    ├── 0000.JPG
+            ├── Masks
+                ├── Anomaly
+                    ├── 000.png
+```
 
 
 ### Test our model
